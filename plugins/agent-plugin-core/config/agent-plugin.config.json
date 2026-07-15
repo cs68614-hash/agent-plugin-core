@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "appId": "agent-plugin-core-example",
+  "displayName": "Agent Plugin Core",
+  "description": "Example task application demonstrating state, semantic actions, optimistic concurrency, dry runs, batches, and audit events.",
+  "adapter": "./app/adapter.mjs",
+  "widget": {
+    "resourceUri": "ui://agent-plugin-core/app.html",
+    "title": "Agent Plugin Core",
+    "defaultDisplayMode": "fullscreen"
+  },
+  "storage": {
+    "directory": ".agent-plugin-core",
+    "stateFile": "state.json",
+    "eventsFile": "events.jsonl"
+  },
+  "actions": [
+    {
+      "name": "list_tasks",
+      "title": "List Tasks",
+      "description": "List tasks in the connected project, optionally filtered by status.",
+      "readOnly": true,
+      "destructive": false,
+      "idempotent": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["todo", "in_progress", "done"]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "create_task",
+      "title": "Create Task",
+      "description": "Create a task with a title and optional description/status.",
+      "readOnly": false,
+      "destructive": false,
+      "idempotent": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "description": { "type": "string", "maxLength": 4000 },
+          "status": {
+            "type": "string",
+            "enum": ["todo", "in_progress", "done"]
+          }
+        },
+        "required": ["title"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_task",
+      "title": "Update Task",
+      "description": "Update selected fields on an existing task.",
+      "readOnly": false,
+      "destructive": false,
+      "idempotent": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "description": { "type": "string", "maxLength": 4000 },
+          "status": {
+            "type": "string",
+            "enum": ["todo", "in_progress", "done"]
+          }
+        },
+        "required": ["id"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_task",
+      "title": "Delete Task",
+      "description": "Delete one task by id. This is destructive and should be explicitly confirmed.",
+      "readOnly": false,
+      "destructive": true,
+      "idempotent": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "minLength": 1 }
+        },
+        "required": ["id"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

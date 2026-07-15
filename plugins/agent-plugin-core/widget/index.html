@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Plugin Core</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">CODEX NATIVE MCP APP</p>
+          <h1 id="app-title">Agent Plugin Core</h1>
+        </div>
+        <div class="topbar-actions">
+          <span id="connection" class="status-pill">Connecting</span>
+          <button id="fullscreen" class="secondary">Fullscreen</button>
+        </div>
+      </header>
+
+      <section class="workspace-grid">
+        <article class="panel state-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="label">AUTHORITATIVE STATE</p>
+              <h2>Application state</h2>
+            </div>
+            <button id="refresh">Refresh</button>
+          </div>
+          <div class="meta-row">
+            <span>Project</span>
+            <code id="project-dir">Waiting for render context…</code>
+          </div>
+          <div class="meta-row">
+            <span>Version</span>
+            <strong id="state-version">—</strong>
+          </div>
+          <pre id="state-output">{}</pre>
+        </article>
+
+        <aside class="panel action-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="label">SEMANTIC ACTION</p>
+              <h2>Execute safely</h2>
+            </div>
+          </div>
+          <label>
+            Action
+            <select id="action-select"></select>
+          </label>
+          <p id="action-description" class="hint"></p>
+          <label>
+            JSON input
+            <textarea id="action-input" spellcheck="false">{}</textarea>
+          </label>
+          <label class="checkbox-row">
+            <input id="dry-run" type="checkbox" />
+            Preview only (dry run)
+          </label>
+          <div class="button-row">
+            <button id="execute">Execute action</button>
+            <button id="send-to-agent" class="secondary">Send state to agent</button>
+          </div>
+          <div id="action-status" class="callout">Choose an action to inspect its contract.</div>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

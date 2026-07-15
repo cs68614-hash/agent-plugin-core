@@ -1,0 +1,46 @@
+{
+  "name": "agent-plugin-core",
+  "version": "0.1.0",
+  "description": "A production-oriented Codex plugin foundation for exposing application state, semantic actions, native widgets, and agent operating skills.",
+  "author": {
+    "name": "cs68614-hash",
+    "url": "https://github.com/cs68614-hash"
+  },
+  "homepage": "https://github.com/cs68614-hash/agent-plugin-core",
+  "repository": "https://github.com/cs68614-hash/agent-plugin-core",
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "automation",
+    "codex",
+    "mcp",
+    "mcp-app",
+    "plugin",
+    "widget"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Agent Plugin Core",
+    "shortDescription": "Turn an application into a native, agent-operable Codex plugin.",
+    "longDescription": "Agent Plugin Core provides a native MCP App widget, semantic action registry, versioned project state, atomic batch operations, audit events, and operator/integrator skills so Codex can safely automate an application instead of clicking an opaque UI.",
+    "developerName": "cs68614-hash",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/cs68614-hash/agent-plugin-core",
+    "brandColor": "#6D5EF8",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg",
+    "capabilities": [
+      "Native fullscreen MCP App widget",
+      "Semantic application actions",
+      "Versioned project-local state",
+      "Atomic batch automation",
+      "Dry-run previews and audit events"
+    ],
+    "defaultPrompt": [
+      "Open the connected application and summarize its current state.",
+      "Plan and execute this workflow in the connected application, then verify the result.",
+      "Help me expose my application's actions and state to Codex."
+    ]
+  }
+}

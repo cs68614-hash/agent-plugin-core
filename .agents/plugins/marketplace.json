@@ -1,0 +1,20 @@
+{
+  "name": "agent-plugin-core",
+  "interface": {
+    "displayName": "Agent Plugin Core"
+  },
+  "plugins": [
+    {
+      "name": "agent-plugin-core",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-plugin-core"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

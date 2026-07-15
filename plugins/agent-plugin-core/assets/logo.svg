@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Agent Plugin Core">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#8b7cff"/>
+      <stop offset="1" stop-color="#3dd6c6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="#14131f"/>
+  <path d="M256 74 414 165v182L256 438 98 347V165z" fill="none" stroke="url(#g)" stroke-width="32"/>
+  <circle cx="256" cy="256" r="54" fill="url(#g)"/>
+  <path d="M256 120v82M374 188l-71 41M374 324l-71-41M256 392v-82M138 324l71-41M138 188l71 41" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".9"/>
+</svg>

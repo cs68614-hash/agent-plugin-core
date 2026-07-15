@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "agent_plugin_core": {
+      "title": "Agent Plugin Core",
+      "description": "Expose a native application widget and semantic automation tools to Codex.",
+      "command": "node",
+      "args": [
+        "./scripts/start-mcp.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

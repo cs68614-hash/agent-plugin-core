@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+plugins/agent-plugin-core/node_modules/
+plugins/agent-plugin-core/dist/
+plugins/agent-plugin-core/.agent-plugin-core/
+*.log

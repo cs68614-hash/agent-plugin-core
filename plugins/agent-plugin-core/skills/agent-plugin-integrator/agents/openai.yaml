@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Plugin Integrator"
+  short_description: "Connect an application to Codex agents"
+  default_prompt: "Use $agent-plugin-core:agent-plugin-integrator to expose this application's state and semantic actions through MCP, integrate its native Widget, and verify the full workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Plugin Operator"
+  short_description: "Operate and verify a connected application"
+  default_prompt: "Use $agent-plugin-core:agent-plugin-operator to inspect the connected application, execute the requested semantic actions safely, and verify the final state."
