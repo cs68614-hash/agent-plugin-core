@@ -2,10 +2,6 @@
 
 一个面向 Codex 的可复用插件底座：把你的现有应用变成一个能在 Codex 右侧打开、能被 Agent 读取状态、调用语义动作、批量执行并验证结果的原生 MCP App。
 
-它抽取了两类实践的优点：
-
-- Cowart 型控制面：项目状态、语义工具、持久化、dry-run、版本保护、审计和 Agent Skill；
-- Music Studio 型实时面：前端 Widget 负责高频交互、音视频、Canvas/WebGL 和即时预览。
 
 核心原则：**Agent 操作业务语义，不模拟点击 DOM；前端负责实时体验，MCP Adapter 负责权威状态和副作用。**
 
